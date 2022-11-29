@@ -24,3 +24,4 @@ if __name__ == '__main__':
         }
     ).encode("utf-8")
     producer.send("HR_USERS_TEST", data)
+    print("Event sent!!!")
