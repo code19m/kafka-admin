@@ -17,7 +17,7 @@ if __name__ == '__main__':
     config_parser.read_file(args.config_file)
     config = dict(config_parser['default'])
     config.update(config_parser['consumer'])
-
+    print("CONFIG", config)
     # Create Consumer instance
     consumer = Consumer(config)
 
@@ -47,8 +47,8 @@ if __name__ == '__main__':
                 # Extract the (optional) key and value, and print.
 
                 print(
-                    # f"TOPIC: {msg.topic()}\n"
-                    # f"KEY: {msg.key()}\n"
+                    f"TOPIC: {msg.topic()}\n"
+                    f"KEY: {msg.key()}\n"
                     f"VALUE: {msg.value()}\n"
                 )
 
