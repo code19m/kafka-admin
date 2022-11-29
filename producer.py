@@ -6,7 +6,7 @@ from kafka import KafkaProducer
 import json
 
 if __name__ == '__main__':
-    
+
     producer = KafkaProducer(bootstrap_servers="192.168.254.139:9092")
     data = json.dumps(
         {
