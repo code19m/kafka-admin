@@ -46,10 +46,11 @@ if __name__ == '__main__':
             else:
                 # Extract the (optional) key and value, and print.
 
+                value = msg.value().decode("utf-8")
                 print(
                     f"TOPIC: {msg.topic()}\n"
                     f"KEY: {msg.key()}\n"
-                    f"VALUE: {msg.value()}\n"
+                    f"VALUE: {value}\n"
                 )
 
     except KeyboardInterrupt:
